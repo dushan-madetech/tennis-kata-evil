@@ -54,4 +54,9 @@ describe Tennis do
   it "returns a score of 0-15 when player Two scores a point" do
     expect(subject.score(:p2)).to eq('0-15')
   end
+
+  it "returns a score of 0-30 when player Two scores another point" do
+    subject.increase_score(:p2)
+    expect(subject.score(:p2)).to eq('0-30')
+  end
 end
