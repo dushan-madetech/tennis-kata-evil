@@ -34,6 +34,10 @@ class Tennis
     if @score_counter == 2
       @player_one_points = 40
     end
+
+    if @score_counter == 2 && player == :p2
+      @player_two_points = 40
+    end
   end
 end
 
