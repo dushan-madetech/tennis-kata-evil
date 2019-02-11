@@ -21,11 +21,16 @@ class Tennis
     end
   end
 
-  def increase_score
+  def increase_score(player = nil)
     @score_counter += 1
     if @player_one_points < 30
       @player_one_points = 30
     end
+
+    if @score_counter == 1
+      @player_two_points = 30
+    end
+
     if @score_counter == 2
       @player_one_points = 40
     end
