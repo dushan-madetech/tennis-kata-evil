@@ -1,6 +1,7 @@
 class Tennis
   def initialize
     @player_one_points = 0
+    @score_counter = 0
   end
 
   def score(player = :p2)
@@ -14,8 +15,12 @@ class Tennis
   end
 
   def increase_score
-    if @player_one_points < 30 
-      @player_one_points = 30 
+    @score_counter += 1
+    if @player_one_points < 30
+      @player_one_points = 30
+    end
+    if @score_counter == 2
+      @player_one_points = 40
     end
   end
 end
